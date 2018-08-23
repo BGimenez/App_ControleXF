@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_ControleXF.Controles.TableViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Dados Fixos - Utilizado em paginas de configuração -->
+            <!-- Intent - Como irá ser utilizado -->
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Backup">
+                        <!-- Celula que utiliza o componente switch -->
+                        <SwitchCell Text="Backup das Imagens" On="False"/>
+                        <SwitchCell Text="Backup dos Textos" On="False"/>
+                        <SwitchCell Text="Backup dos Chats" On="False"/>
+                        
+                        <!-- Para criar a própria celula -->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Backup Frequencia(semanal)" />
+                                <Slider Minimum="0" Maximum="7"  HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                    </TableSection>
+                    
+                    <TableSection Title="Segurança">
+                        <SwitchCell Text="Senhas criptografadas" On="True"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

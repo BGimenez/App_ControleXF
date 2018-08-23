@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_ControleXF.Controles.ImagePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="Container">
+            <!-- surce - pode utilizar imagens que estejam em Resource, Local ou Internet -->
+            <!-- Aspect - fill = preencher o max possivel da tela(independente da proporção da imagem);
+                          aspectFill = aumentar max possivel mantendo proporção;
+                          aspectFit = apresenta a imagem do tamanho que é, se for menor diminui, se for maior vai até mo max da imagem original-->
+            <!-- IsOpaque - true para imagem que não tem fundo, para ganhar performance -->
+            <Image
+                Source="https://upload.wikimedia.org/wikipedia/pt/c/cf/Logotipo_do_Burger_King.svg"
+                Aspect="Fill"
+                IsOpaque="True"
+                x:Name="ImageOne"
+                
+                VerticalOptions="FillAndExpand"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_ControleXF.Controles.EntryEditorPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!--Especifico para campos com poucos valores
+            1 parte caracteristicas
+            2 parte da input view
+            3 parte da view-->
+            <Entry
+                x:Name="txtIdade"
+                Text=""
+                TextColor="Red"
+                Placeholder="Digite sua idade"
+                PlaceholderColor="Blue"
+                IsPassword="False"
+                                
+                Keyboard="Numeric"
+                                
+                BackgroundColor="#CCCCCC"
+                />
+
+            <Label x:Name="lblDuplicado" />
+
+            <Editor x:Name="txtComentario" 
+                    HeightRequest="200" />
+            <Label x:Name="lblQuantidadeChar" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

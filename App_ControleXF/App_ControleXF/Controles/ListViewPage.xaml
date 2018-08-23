@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mod="clr-namespace:App_ControleXF.Modelo"
+             x:Class="App_ControleXF.Controles.ListViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type mod:Pessoa}">
+                        <mod:Pessoa Nome="João Rodrigues"
+                                    Idade="18"/>
+                        <mod:Pessoa Nome="Maria Rodrigues"
+                                    Idade="21"/>
+                        <mod:Pessoa Nome="Felipe Rodrigues"
+                                    Idade="24"/>
+                        <mod:Pessoa Nome="José Rodrigues"
+                                    Idade="30"/>
+                        <mod:Pessoa Nome="Mariana Rodrigues"
+                                    Idade="31"/>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <!-- Como vão ser apresentados os dados acima -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Permite customizar a forma de colocar os elementos, em qualquer lugar-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nome}"/>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding Idade}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="5" Color="Black"/>
+
+            <ListView x:Name="ListaPessoas">
+                <!-- Como vão ser apresentados os dados -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Permite customizar a forma de colocar os elementos, em qualquer lugar-->
+                        <ViewCell>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <!-- se colocar {Biding .} passa o objeto ao invés do campo -->
+                                <Label Text="{Binding Nome}"/>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding Idade}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
